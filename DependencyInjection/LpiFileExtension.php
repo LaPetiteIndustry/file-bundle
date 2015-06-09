@@ -1,6 +1,6 @@
 <?php
 
-namespace Lpi\KernelBundle\DependencyInjection;
+namespace Lpi\FileBundle\DependencyInjection;
 
 use Sonata\EasyExtendsBundle\Mapper\DoctrineCollector;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

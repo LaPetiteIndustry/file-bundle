@@ -2,11 +2,21 @@
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
                   xsi="http://www.w3.org/2001/XMLSchema-instance"
                   schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
-    <mapped-superclass name="Lpi\KernelBundle\Entity\BaseContent" repository-class="Lpi\KernelBundle\Emtit">
 
+    <entity
+            name="Lpi\FileBundle\Entity\File"
+            table="lpi__file"
+            >
+
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+
+
+        <field name="originalName" type="string" length="255"/>
         <field name="content" type="blob"/>
-        <field name="type" type="varchar" length="40"/>
-        <field name="size" type="int" length="11"/>
+        <field name="type" type="string" length="40"/>
+        <field name="size" type="integer" length="11"/>
 
 
         <field name="updatedAt" column="updated_at" type="datetime"/>
@@ -17,5 +27,5 @@
             <lifecycle-callback type="preUpdate" method="preUpdate"/>
         </lifecycle-callbacks>
 
-    </mapped-superclass>
+    </entity>
 </doctrine-mapping>

@@ -7,13 +7,13 @@
         <parameter key="lpi.file.admin.translation_domain">LpiFileBundle</parameter>
         <parameter key="lpi.file.admin.file.class">Lpi\FileBundle\Admin\FileAdmin</parameter>
         <parameter key="lpi.file.admin.file.entity">Lpi\FileBundle\Entity\File</parameter>
-        <parameter key="lpi.file.admin.file.controller">SonataAdminBundle:CRUDController</parameter>
+        <parameter key="lpi.file.admin.file.controller">SonataAdminBundle:CRUD</parameter>
     </parameters>
 
     <services>
 
         <service id="lpi.file.admin.file" class="%lpi.file.admin.file.class%">
-            <tag name="sonata.admin" manager_type="orm" group="Structure" label="Zone"
+            <tag name="sonata.admin" manager_type="orm" group="Structure" label="Fichiers"
                  label_catalogue="%lpi.file.admin.translation_domain%"
                  label_translator_strategy="sonata.admin.label.strategy.underscore"/>
             <argument/>
